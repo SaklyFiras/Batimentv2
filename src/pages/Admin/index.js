@@ -1,7 +1,8 @@
 import axios from "axios";
 import { useState } from "react";
 
-export const url = "http://localhost:4000/api/v2";
+export const url =
+	`${process.env.ONLINE_URL}/api/v2` || "localhost:3000/api/v2";
 export const config = {
 	headers: {
 		"Content-Type": "application/json",
