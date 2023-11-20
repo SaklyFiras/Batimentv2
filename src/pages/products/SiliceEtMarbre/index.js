@@ -71,7 +71,7 @@ function index() {
 						<form className="">
 							<div>
 								<label
-									for="first_name"
+									htmlFor="first_name"
 									class="block mb-2 text-sm font-medium text-gray-900 "
 								>
 									First name
@@ -86,7 +86,7 @@ function index() {
 							</div>
 							<div class="mb-1">
 								<label
-									for="email"
+									htmlFor="email"
 									class="block mb-2 text-sm font-medium text-gray-900 "
 								>
 									Email address
@@ -94,22 +94,22 @@ function index() {
 								<input
 									type="email"
 									id="email"
-									class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+									className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
 									placeholder="john.doe@company.com"
 									required
 								/>
 							</div>
 							<div>
 								<label
-									for="phone"
-									class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+									htmlFor="phone"
+									className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
 								>
 									Phone number
 								</label>
 								<input
 									type="tel"
 									id="phone"
-									class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+									className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
 									placeholder="123-45-678"
 									pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
 									required
@@ -117,8 +117,8 @@ function index() {
 							</div>
 							<div>
 								<label
-									for="message"
-									class="block mb-2 text-sm font-medium text-gray-900 "
+									htmlFor="message"
+									className="block mb-2 text-sm font-medium text-gray-900 "
 								>
 									Your message
 								</label>
@@ -132,7 +132,7 @@ function index() {
 							<div className=" flex justify-end">
 								<button
 									type="button"
-									class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 mt-2  "
+									className="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 mt-2  "
 								>
 									Envoyer
 								</button>
