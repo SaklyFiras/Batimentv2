@@ -1,8 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 
-export const url =
-	`${process.env.ONLINE_URL}/api/v2` || "localhost:3000/api/v2";
+export const url = "https://batimentv2.onrender.com/api/v2";
 export const config = {
 	headers: {
 		"Content-Type": "application/json",
