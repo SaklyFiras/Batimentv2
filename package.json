@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "node server",
     "lint": "next lint",
-    "online" :"npm install"
+    "online" :"npm install && npm run build"
     
   },
   "dependencies": {
