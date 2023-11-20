@@ -94,7 +94,7 @@ function index() {
 					<div className="absolute inset-0 bg-black opacity-50"></div>
 					<div className="absolute inset-0 flex items-center justify-center flex-col text-white  ">
 						<h2 className="md:text-4xl text-center font-bold mb-4 ">
-							Interested in working with us?
+						Interresé par nos services ?
 						</h2>
 						<p className="md:text-md text-sm md:w-1/2 text-center mb-6">
 							Un projet de terrasse, d’aménagement de piscine, une allée, un
@@ -106,7 +106,7 @@ function index() {
 							href="/contactus"
 							className="bg-slate-500 hover:bg-slate-700 text-white md:font-medium font-serif py-2 px-4 rounded no-underline"
 						>
-							Contact Us
+							Contactez-nous
 						</Link>
 					</div>
 				</div>

@@ -156,7 +156,7 @@ const Interface = () => {
 			<div className="md:w-5/6 p-4">
 				<div className="flex flex-col border-2 p-5">
 					<input
-						className="mb-2 text-blue-500 bg-gray-200 rounded-lg h-min w-min mx-auto w-40"
+						className="mb-2 text-blue-500 bg-gray-200 rounded-lg h-min  mx-auto w-40"
 						type="file"
 						name="imageFile"
 						multiple

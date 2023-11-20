@@ -106,7 +106,7 @@ function Drawer() {
 							onClick={hideDrawer}
 							href="/products"
 						>
-							Products
+							Produits
 						</Link>
 					</div>
 					<div>
