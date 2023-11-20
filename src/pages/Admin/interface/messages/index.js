@@ -22,23 +22,23 @@ const Interface = () => {
 	}, []);
 	const [Messages, setMessages] = useState([]);
 	return (
-		<div className="flex h-fit mt-5">
+		<div className="flex flex-row h-fit mt-5">
 			{/* Left column: Accordion */}
-			<div className="w-1/6 p-4 border-r">
-				<div>
+			<div className="flex justify-center md:w-1/6 p-4 border-r">
+				
 					<Routes />
-				</div>
+				
 			</div>
 
 			{/* Right column: Box with images and buttons */}
-			<div className="w-5/6 p-4">
-				<div className="flex flex-wrap">
+			<div className="md:w-5/6 p-4 overflow-auto">
+				<div className="flex flex-col max-w-sm flex-wrap">
 					<h1 className="mx-auto">MESSAGES</h1>
 					{/*Messages wih email name telephone and message */}
 					{Messages.map((message, index) => (
 						<div
 							key={index}
-							className="grid grid-cols-3 grid-rows-2 w-full border-2 mt-2 shadow-sm p-4"
+							className="flex flex-col  border-2 mt-2 shadow-sm p-4"
 						>
 							<p className="flex text-decoration-underline">
 								<span className=" text-indigo-500 font-bold">Email : </span>
@@ -53,7 +53,7 @@ const Interface = () => {
 								{message.telephone}
 							</p>
 							<p className="overflow-auto break-words col-span-3">
-								<span className=" text-indigo-500 font-bold">Message : </span>
+								<span className=" text-break break-words text-indigo-500 font-bold">Message : </span>
 								{message.message}
 							</p>
 						</div>

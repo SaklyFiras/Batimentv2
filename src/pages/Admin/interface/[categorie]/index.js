@@ -147,19 +147,16 @@ const Interface = () => {
 	};
 
 	return (
-		<div className="flex h-screen mt-5">
-			{/* Left column: Accordion */}
-			<div className="w-1/6 p-4 border-r">
-				<div>
-					<Routes />
-				</div>
+		<div className="flex flex-row flex-wrap h-screen mt-5">
+			<div className="flex justify-center mx-auto md:w-1/6 p-4 border-r">
+				<Routes />
 			</div>
 
 			{/* Right column: Box with images and buttons */}
-			<div className="w-5/6 p-4">
+			<div className="md:w-5/6 p-4">
 				<div className="flex flex-col border-2 p-5">
 					<input
-						className="mb-2 text-blue-500 bg-gray-200 rounded-lg h-min w-min mx-auto"
+						className="mb-2 text-blue-500 bg-gray-200 rounded-lg h-min w-min mx-auto w-40"
 						type="file"
 						name="imageFile"
 						multiple
@@ -180,7 +177,7 @@ const Interface = () => {
 							</div>
 						))}
 					</div>
-					<div className="flex  justify-end gap-2">
+					<div className="flex flex-wrap  justify-end gap-2">
 						<button
 							disabled={loading}
 							onClick={handleUpload}

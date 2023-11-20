@@ -19,7 +19,7 @@ function Routes() {
 	]);
 
 	return (
-		<div>
+		<div className=" flex justify-center  ">
 			{accordionItems.map((item) => (
 				<div key={item.id}>
 					<Link
