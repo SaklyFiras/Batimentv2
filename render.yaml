@@ -1,0 +1,14 @@
+version: 0
+buildCommand: npm run build
+startCommand: npm start
+
+services:
+  - name: frontend
+    type: web
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
+
+  - name: backend
+    type: web
+    buildCommand: npm --prefix Server install && npm --prefix Server run build
+    startCommand: npm --prefix Server run start
