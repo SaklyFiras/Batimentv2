@@ -44,7 +44,7 @@ export default function Navbar() {
 					<div className="relative transition delay-200 duration-300 px-2 rounded-xl p-2  text-indigo-500  ">
 						<Link
 							href={"/entreprise"}
-							className="text-indigo-500 hover:underline hover:text-blue-700 hover:opacity-60 focus:text-white"
+							className="text-slate-300 no-underline  hover:text-slate-100 hover:opacity-60 focus:text-white"
 							onMouseEnter={() => setDropdownVisible(true)}
 						>
 							Entreprise
@@ -59,7 +59,7 @@ export default function Navbar() {
 									<li>
 										<Link
 											href={"/entreprise"}
-											className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+											className="block px-4 py-2 text-gray-800 hover:bg-gray-200 no-underline"
 										>
 											Qui sommes nous ?
 										</Link>
@@ -67,7 +67,7 @@ export default function Navbar() {
 									<li>
 										<Link
 											href={"/entreprise/technique"}
-											className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+											className="block px-4 py-2 text-gray-800 hover:bg-gray-200 no-underline"
 										>
 											Nos techniques
 										</Link>
@@ -75,7 +75,7 @@ export default function Navbar() {
 									<li>
 										<Link
 											href={"/entreprise/savoirfaire"}
-											className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+											className="block px-4 py-2 text-gray-800 hover:bg-gray-200 no-underline"
 										>
 											Notre savoir faire
 										</Link>
@@ -86,7 +86,7 @@ export default function Navbar() {
 					</div>
 					<Link
 						href="/products"
-						className={`transition delay-200 duration-300 px-2 rounded-xl p-2  text-indigo-500 hover:opacity-60 focus:text-white  `}
+						className={`text-slate-300 no-underline  hover:text-slate-100 hover:opacity-60 focus:text-white p-2  `}
 					>
 						Products
 					</Link>
@@ -103,13 +103,13 @@ export default function Navbar() {
 
 					<Link
 						href="/contactus"
-						className={`transition delay-200 duration-300 px-2 rounded-xl p-2  text-indigo-500 hover:opacity-60 focus:text-white  `}
+						className={`text-slate-300 no-underline  hover:text-slate-100 hover:opacity-60 focus:text-white p-2`}
 					>
 						Contact
 					</Link>
 					<Link
 						href="/realisations"
-						className={`transition delay-200 duration-300 px-2 rounded-xl p-2  text-indigo-500 hover:opacity-60 focus:text-white  `}
+						className={`text-slate-300 no-underline  hover:text-slate-100 hover:opacity-60 focus:text-white p-2 `}
 					>
 						Realisations
 					</Link>

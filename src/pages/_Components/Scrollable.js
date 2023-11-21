@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Scrollable = () => {
 	return (
-		<div className="flex flex-col h-fit my-8 w-screen    bg-gray-100 mx-0 px-0 ">
+		<div className="flex flex-col h-fit  mb-4 w-screen    bg-gray-100 mx-0 px-0 ">
 			<div className="flex items-center justify-center  ">
 				<h1 className="text-4xl font-medium text-gray-800 py-4">
 					Nos qualités

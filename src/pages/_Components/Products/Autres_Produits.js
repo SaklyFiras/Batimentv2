@@ -37,23 +37,27 @@ function Autres_Produits({ current }) {
 		<div className="mx-5">
 			<h2 className=" indent-10">Autres</h2>
 			<div className="flex flex-wrap justify-center my-10 border-2  mx-auto shadow-sm ">
-				{images.map((image, index) => (
-					current !== image.title.toLowerCase() && (
-					<Link
-						href={image.Link}
-						key={index}
-						className="h-auto w-auto flex flex-col p-8 "
-					>
-						<Image
-							src={image.imageUrl}
-							alt={image.title}
-							width={150}
-							height={150}
-							className="rounded h-32 shadow-xl hover:brightness-125 hover:-translate-y-1 hover:scale-105 hover:cursor-pointer transition-transform duration-300 ease-in-out"
-						/>
-						<h6 className="text-center mt-3 text-black">{image.title}</h6>
-					</Link>
-				)))}
+				{images.map(
+					(image, index) =>
+						current !== image.title.toLowerCase() && (
+							<Link
+								href={image.Link}
+								key={index}
+								className="  group/edit h-auto w-auto flex flex-col p-8  no-underline"
+							>
+								<Image
+									src={image.imageUrl}
+									alt={image.title}
+									width={150}
+									height={150}
+									className="   rounded h-32 shadow-xl hover:brightness-125 hover:-translate-y-1 hover:scale-105 hover:cursor-pointer transition-transform duration-300 ease-in-out"
+								/>
+								<h6 className=" group-hover/edit:text-gray-500 text-center mt-3 text-gray-900">
+									{image.title}
+								</h6>
+							</Link>
+						)
+				)}
 			</div>
 		</div>
 	);

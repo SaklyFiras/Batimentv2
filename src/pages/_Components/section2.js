@@ -15,7 +15,7 @@ function Section2() {
 		<div className="grid md:grid-flow-col     justify-between w-screen   my-16 mx-4 h-fit ">
 			<div className=" my-auto text-center ">
 				<h1 className="text-2xl mb-4 indent-4 ">Qui sommes nous ?</h1>
-				<p className="text-centertext-gray-700  mb-12  indent-5 px-5  ">
+				<p className="text-centertext-gray-700  mb-8  indent-5 px-3  ">
 					Fondée en 2015, CASM est une entreprise locale spécialisée dans les
 					revêtements de sols et murs, intérieurs et extérieurs. À partir de
 					pierres naturelles, de marbre, de quartz ou encore de silice, CASM
@@ -26,9 +26,9 @@ function Section2() {
 				</p>
 
 				<Link
-					href="/entreprise"	
+					href="/entreprise"
 					type="button"
-					className="text-gray-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800"
+					className="text-gray-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-4 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800"
 				>
 					Learn more
 				</Link>

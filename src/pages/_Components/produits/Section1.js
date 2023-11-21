@@ -1,4 +1,3 @@
-
 import MM1 from "../../../../public/images/produits/MM1.jpeg";
 import MM2 from "../../../../public/images/produits/MM2.jpeg";
 import Image from "next/image";
@@ -34,33 +33,31 @@ function Section1() {
 					width={400}
 					src={MM1.src}
 					alt="Moquette de marbre"
-					className="h-96 aspect-square mb-4 mx-auto rounded-3xl "
+					className="h-96 aspect-square mb-4  mx-auto rounded-3xl "
 				/>
 
-				<div className="flex    p-4 justify-around ">
-					<div className="h-32 aspect-square flex flex-wrap justify-around gap-2 w-full my-5 ">
-						{listIcons1.map((image, index) => (
-							<Image
-								key={index}
-								src={image}
-								width={80}
-								height={90}
-								className=""
-								alt="image"
-							/>
-						))}
-					</div>
+				<div className=" grid  grid-row-3 grid-cols-3    px-8 justify-around ">
+					{listIcons1.map((image, index) => (
+						<Image
+							key={index}
+							src={image}
+							width={80}
+							height={90}
+							className=""
+							alt="image"
+						/>
+					))}
 				</div>
 				<Link
 					href={"/products/Moquettedemarbre"}
-					className="bg-slate-500 hover:bg-slate-700 text-white font-bold py-2 px-4 mt-4 rounded w-full mx-auto text-center "
+					className="bg-slate-500 hover:bg-slate-700 text-white font-bold py-2 px-4 mt-4 rounded w-full mx-auto text-center no-underline "
 				>
 					Gamme de moquette de marbre
 				</Link>
 			</div>
 
 			<div className=" flex flex-col">
-				<h2 className="text-3xl font-bold mb-4 text-center">Silice & marbre</h2>
+				<h2 className="text-3xl font-bold mb-4 text-center ">Silice & marbre</h2>
 				<Image
 					height={400}
 					width={400}
@@ -69,8 +66,8 @@ function Section1() {
 					className="h-96 aspect-square mb-4 rounded-3xl mx-auto"
 				/>
 
-				<div className="flex   p-4   justify-around ">
-					<div className="h-32 aspect-square flex flex-wrap justify-around gap-2 w-full my-5 ">
+				<div className="grid  grid-row-3 grid-cols-3    px-8 justify-around ">
+					
 						{listIcons1.map((image, index) => (
 							<Image
 								key={index}
@@ -81,11 +78,11 @@ function Section1() {
 								alt="image"
 							/>
 						))}
-					</div>
+				
 				</div>
 				<Link
 					href={"/products/SiliceEtMarbre"}
-					className="bg-slate-500 hover:bg-slate-700 text-white font-bold py-2 px-4 mt-4 rounded w-full mx-auto text-center"
+					className="bg-slate-500 hover:bg-slate-700 text-white font-bold py-2 px-4 mt-4 rounded w-full mx-auto text-center no-underline"
 				>
 					Gamme slice & marbre
 				</Link>

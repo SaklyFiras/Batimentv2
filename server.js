@@ -20,6 +20,6 @@ app.prepare().then(() => {
 
 	appexpress.listen(port, (err) => {
 		if (err) throw err;
-		console.log(`Runing on port ${port}, dev: ${dev}`);
+		console.log(`listening on port ${port} in ${dev} mode`);
 	});
 });

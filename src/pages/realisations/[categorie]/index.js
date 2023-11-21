@@ -6,8 +6,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 import { url, config } from "../../Admin/index";
-
-
+import Head from "next/head";
 
 const Links = [
 	{
@@ -41,7 +40,6 @@ function Piscine() {
 	const router = useRouter();
 	const { categorie } = router.query;
 
-
 	const findCategorieIndexInList = (categorie) => {
 		return Links.findIndex((link) => link.name.toLowerCase() === categorie);
 	};
@@ -67,14 +65,12 @@ function Piscine() {
 
 	const handleGetImages = async () => {
 		try {
-			
 			const response = await axios.get(
 				`${url}/images/${categorie}`,
 				{},
 				config
 			);
 			if (response.status === 200) {
-				
 				setUploadedImages(response.data.images[0].images);
 			} else {
 				console.error("Login failed"); // Handle login error
@@ -86,13 +82,17 @@ function Piscine() {
 	};
 
 	useEffect(() => {
+		setUploadedImages([]);
 		handleGetImages();
 	}, [categorie]);
 
 	return (
-		<>
-			<div className="flex justify-center items-center  gap-6 ">
-				<div className="grid grid-cols-3  md:gap-4 gap-2 mx-2 mt-20  mb-5 ">
+		<div className="mt-20 h-fit min-h-screen">
+			<Head>
+				<title>Realisations | {categorie}</title>
+			</Head>
+			<div className="flex justify-center items-center  gap-6 mb-64 ">
+				<div className="grid grid-cols-3  md:gap-4 gap-2 mx-2   mb-5 ">
 					{uploadedImages.map((image, index) => (
 						<div key={index} className="md:h-64 h-32 w-auto flex ">
 							<Image
@@ -106,9 +106,9 @@ function Piscine() {
 					))}
 				</div>
 			</div>
-			<div className="flex justify-between md:m-5 m-2 border-2 p-4 items-center shadow-md">
+			<div className="flex justify-between md:m-5 m-2 border-2  p-4 mx-5 mb-5 items-center shadow-md">
 				<Link
-					className=" text-black w-12 md:w-20 text-break"
+					className=" text-black w-12 md:w-20 text-break text-center "
 					href={left && left.url}
 				>
 					{left && left.name}
@@ -132,7 +132,7 @@ function Piscine() {
 						className="shadow-xl hover:brightness-125 hover:-translate-y-1 hover:scale-105 transition-transform duration-300 ease-in-out"
 					></Image>
 				</Link>
-				<Link className=" text-black" href={right && right.url}>
+				<Link className=" text-black w-12 md:w-20 text-break text-center" href={right && right.url}>
 					{right && right.name}
 					<Image
 						src={"/images/Icons/arrow.png"}
@@ -144,7 +144,7 @@ function Piscine() {
 				</Link>
 			</div>
 			<Autres_Produits current={categorie} />
-		</>
+		</div>
 	);
 }
 

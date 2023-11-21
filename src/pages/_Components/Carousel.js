@@ -17,18 +17,18 @@ const Slides = () => {
 					<p className=" text-indigo-900   text-3xl  font-medium pb-4 ">
 						Découvrez notre vitrine et trouvez l essentiel que vous cherchez.
 					</p>{" "}
-					<div className="flex justify-around gap-2">
+					<div className="flex justify-evenly gap-2">
 						<Link
 							href={"/products"}
 							type="button"
-							className="text-white  bg-blue-900 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300  rounded-lg md:text-sm text-xs  px-5 py-2.5  inline-flex items-center  "
+							className="text-white  bg-blue-900 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300  rounded-lg md:text-sm text-xs  px-5 py-2.5  inline-flex items-center no-underline  "
 						>
 							Nos produits
 						</Link>
 						<Link
 							href={"/contactus"}
 							type="button"
-							className="relative text-white bg-blue-900 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300  rounded-lg md:text-sm text-xs  px-5 py-2.5  inline-flex items-center  "
+							className="relative text-white bg-blue-900 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300  rounded-lg md:text-sm text-xs  px-5 py-2.5  inline-flex items-center no-underline  "
 						>
 							Contactez-nous
 							<svg
@@ -63,18 +63,18 @@ const Slides = () => {
 					<p className=" text-indigo-900   text-3xl  font-medium pb-4 ">
 						Découvrez notre vitrine et trouvez l essentiel que vous cherchez.
 					</p>{" "}
-					<div className="flex justify-around gap-2">
+					<div className="flex justify-evenly gap-2">
 						<Link
 							href={"/products"}
 							type="button"
-							className="text-white  bg-blue-900 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300  rounded-lg md:text-sm text-xs  px-5 py-2.5  inline-flex items-center  "
+							className="text-white  bg-blue-900 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300  rounded-lg md:text-sm text-xs  px-5 py-2.5  inline-flex items-center no-underline  "
 						>
 							Nos produits
 						</Link>
 						<Link
 							href={"/contactus"}
 							type="button"
-							className="relative text-white bg-blue-900 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300  rounded-lg md:text-sm text-xs  px-5 py-2.5  inline-flex items-center  "
+							className="relative text-white bg-blue-900 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300  rounded-lg md:text-sm text-xs  px-5 py-2.5  inline-flex items-center no-underline  "
 						>
 							Contactez-nous
 							<svg

@@ -2,21 +2,21 @@ import Image from "next/image";
 import Link from "next/link";
 function Couleurs() {
 	return (
-		<div className="bg-gray-100  p-8 w-screen h-fit mb-4">
+		<div className="bg-gray-100  p-8 w-screen h-fit md:h-[36rem] mb-4">
 			<div className=" flex">
-				<div className="my-auto md:w-4/12  px-4 d-flex flex-col z-10">
-					<h1 className="text-3xl font-medium px-5">Couleurs</h1>
-					<p className="text-left md:px-5 pt-4 font-light">
+				<div className="md:w-3/12 md:h-[28rem] place-items-start place-content-center md:pl-10    flex flex-col z-10">
+					<h1 className="text-3xl font-medium ">Couleurs</h1>
+					<p className="  pt-4 font-light text-left">
 						Lorem losum dolor sit amet consectetur adipiscing ent. Phasellus
 						aliquet puris et arc tincidunt tempus Dus ultricies, form sit amet
 						handent sodales or deior vulputate matus
 					</p>
-					<Link href={"/products"} className="md:w-1/2 bg-slate-700 text-white hover:text-white border mx-5 border-gray-800 hover:bg-gray-900 focus:ring-4  font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 ">
+					<Link href={"/products"} className="md:w-1/2 bg-slate-700 text-white hover:text-white border  border-gray-800 hover:bg-gray-900 focus:ring-4  font-medium rounded-lg text-sm max-w-max px-5 py-2.5 text-center mr-2 mb-2 ">
 						Découvrir
 					</Link>
 				</div>
-				<div className=" w-8/12  ">
-					<div className="md:grid md:grid-cols-3 md:grid-rows-5 md:gap-4 md:w-[32rem] md:rotate-45 md:h-[52rem] hidden  md:-z-10  mx-auto ">
+				<div className="relative md:w-8/12  ">
+					<div className=" absolute -top-44 right-40  md:grid  md:grid-cols-3 md:grid-rows-5 md:gap-4 md:w-[32rem] md:rotate-45 md:h-[52rem] hidden    mx-auto ">
 						<div className="relative rotate-45 col-start-3 row-start-1">
 							<Image
 								src="/images/moquette/aubergine.jpg"
