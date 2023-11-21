@@ -19,6 +19,7 @@ const nextConfig = {
 		],
 	},
 	reactStrictMode: true,
+	useFileSystemPublicRoutes: false,
 };
 
 module.exports = nextConfig;
