@@ -11,8 +11,8 @@ const images = [
 	["/images/moquette/aubergine.jpg", "Aubergine"],
 	["/images/moquette/beige.jpg", "Beige"],
 	["/images/moquette/blanc.jpg", "Blanc"],
-	["/images/moquette/gris-anthracite.jpg", "Gris Anthracite"],
-	["/images/moquette/gris-clair.jpg", "Gris Clair"],
+	["/images/moquette/grisAnthracite.jpg", "Gris Anthracite"],
+	["/images/moquette/grisClair.jpg", "Gris Clair"],
 	["/images/moquette/jaune.jpg", "Jaune"],
 	["/images/moquette/rouge.jpg", "Rouge"],
 	["/images/moquette/saumon.jpg", "Saumon"],
@@ -29,7 +29,7 @@ const Index = () => {
 		e.preventDefault();
 		// add "(avis)" to the message
 		message.message = "(avis) " + message.message;
-		
+
 		try {
 			const response = await axios.post(`${url}/message`, message, config);
 			if (response.status === 200) {
@@ -86,12 +86,20 @@ const Index = () => {
 						<p className=" font-bold">Nos produits</p>
 						<ul className="list-disc">
 							<li>
-								<Link className=" no-underline  text-slate-500 hover:text-slate-700" href={"/products/Moquettedemarbre"}>
+								<Link
+									className=" no-underline  text-slate-500 hover:text-slate-700"
+									href={"/products/Moquettedemarbre"}
+								>
 									Moquette de marbre
 								</Link>
 							</li>
 							<li>
-								<Link className=" no-underline  text-slate-500 hover:text-slate-700" href={"/products/SiliceEtMarbre"}>Slice & marbre</Link>
+								<Link
+									className=" no-underline  text-slate-500 hover:text-slate-700"
+									href={"/products/SiliceEtMarbre"}
+								>
+									Slice & marbre
+								</Link>
 							</li>
 						</ul>
 					</div>

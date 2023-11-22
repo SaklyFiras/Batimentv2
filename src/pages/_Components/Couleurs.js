@@ -55,7 +55,7 @@ function Couleurs() {
 						</div>
 						<div className="relative rotate-45 col-start-1 row-start-3">
 							<Image
-								src="/images/moquette/gris-anthracite.jpg"
+								src="/images/moquette/grisAnthracite.jpg"
 								alt="Image 1"
 								width={200}
 								height={200}
@@ -67,7 +67,7 @@ function Couleurs() {
 						</div>
 						<div className="relative rotate-45 col-start-2 row-start-3">
 							<Image
-								src="/images/moquette/gris-clair.jpg"
+								src="/images/moquette/grisClair.jpg"
 								alt="Image 1"
 								width={200}
 								height={200}
