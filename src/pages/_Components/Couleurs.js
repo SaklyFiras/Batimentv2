@@ -11,18 +11,19 @@ function Couleurs() {
 						aliquet puris et arc tincidunt tempus Dus ultricies, form sit amet
 						handent sodales or deior vulputate matus
 					</p>
-					<Link href={"/products"} className="md:w-1/2 bg-slate-700 text-white hover:text-white border  border-gray-800 hover:bg-gray-900 focus:ring-4  font-medium rounded-lg text-sm max-w-max px-5 py-2.5 text-center mr-2 mb-2 ">
+					<Link
+						href={"/products"}
+						className="md:w-1/2 bg-slate-700 text-white hover:text-white border  border-gray-800 hover:bg-gray-900 focus:ring-4  font-medium rounded-lg text-sm max-w-max px-5 py-2.5 text-center mr-2 mb-2 "
+					>
 						Découvrir
 					</Link>
 				</div>
 				<div className="relative md:w-8/12  ">
 					<div className=" absolute -top-44 right-40  md:grid  md:grid-cols-3 md:grid-rows-5 md:gap-4 md:w-[32rem] md:rotate-45 md:h-[52rem] hidden    mx-auto ">
 						<div className="relative rotate-45 col-start-3 row-start-1">
-							<Image
+							<img
 								src="/images/moquette/aubergine.jpg"
 								alt="Image 1"
-								width={200}
-								height={200}
 								className="  object-cover  aspect-square  -rotate-45 "
 							/>
 							<p className="absolute w-1/2 opacity-75 bg-slate-100 -rotate-90 bottom-[29%] left-10 right-0 text-center text-black font-serif ">
@@ -30,11 +31,9 @@ function Couleurs() {
 							</p>
 						</div>
 						<div className="relative rotate-45 col-start-2 row-start-2">
-							<Image
+							<img
 								src="/images/moquette/beige.jpg"
 								alt="Image 1"
-								width={200}
-								height={200}
 								className="  object-cover  aspect-square  -rotate-45 "
 							/>
 							<p className="absolute w-1/2 opacity-75 bg-slate-100 -rotate-90 bottom-[29%] left-10 right-0 text-center text-black font-serif">
@@ -42,11 +41,9 @@ function Couleurs() {
 							</p>
 						</div>
 						<div className="relative rotate-45 col-start-3 row-start-2">
-							<Image
+							<img
 								src="/images/moquette/blanc.jpg"
 								alt="Image 1"
-								width={200}
-								height={200}
 								className="  object-cover  aspect-square  -rotate-45 "
 							/>
 							<p className="absolute w-1/2 opacity-75 bg-slate-100 -rotate-90 bottom-[29%] left-10 right-0 text-center text-black font-serif">
@@ -54,11 +51,9 @@ function Couleurs() {
 							</p>
 						</div>
 						<div className="relative rotate-45 col-start-1 row-start-3">
-							<Image
+							<img
 								src="/images/moquette/grisAnthracite.jpg"
 								alt="Image 1"
-								width={200}
-								height={200}
 								className="  object-cover  aspect-square  -rotate-45 "
 							/>
 							<p className="absolute w-1/2 opacity-75 bg-slate-100 -rotate-90 bottom-9 left-10 right-0 text-center text-black font-serif">
@@ -66,11 +61,9 @@ function Couleurs() {
 							</p>
 						</div>
 						<div className="relative rotate-45 col-start-2 row-start-3">
-							<Image
+							<img
 								src="/images/moquette/grisClair.jpg"
 								alt="Image 1"
-								width={200}
-								height={200}
 								className="  object-cover  aspect-square  -rotate-45 "
 							/>
 							<p className="absolute w-1/2 opacity-75 bg-slate-100 -rotate-90 bottom-[29%] left-10 right-0 text-center text-black font-serif">
@@ -78,11 +71,9 @@ function Couleurs() {
 							</p>
 						</div>
 						<div className="relative rotate-45 col-start-1 row-start-4">
-							<Image
+							<img
 								src="/images/moquette/jaune.jpg"
 								alt="Image 1"
-								width={200}
-								height={200}
 								className="  object-cover  aspect-square  -rotate-45 "
 							/>
 							<p className="absolute w-1/2 opacity-75 bg-slate-100 -rotate-90 bottom-[29%] left-10 right-0 text-center text-black font-serif">
@@ -98,11 +89,9 @@ function Couleurs() {
 							</div>
 						</div>
 						<div className="relative rotate-45 col-start-1 row-start-5">
-							<Image
+							<img
 								src="/images/moquette/saumon.jpg"
 								alt="Image 1"
-								width={200}
-								height={200}
 								className="  object-cover  aspect-square  -rotate-45 "
 							/>
 							<p className="absolute w-1/2 opacity-75 bg-slate-100 -rotate-90 bottom-[29%] left-10 right-0 text-center text-black font-serif">
