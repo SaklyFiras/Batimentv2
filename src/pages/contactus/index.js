@@ -134,7 +134,7 @@ const ContactUs = () => {
 				<div className="flex md:flex-row flex-col justify-evenly items-center w-screen p-6">
 					<div className="flex flex-col justify-center items-center">
 						<h1 className="text-2xl font-bold text-center">Addresse</h1>
-						<Image
+						<img
 							src={"/images/LOCAL.png"}
 							width={60}
 							height={60}
@@ -145,7 +145,7 @@ const ContactUs = () => {
 					</div>
 					<div className="flex flex-col justify-center items-center">
 						<h1 className="text-2xl font-bold text-center">Telephone</h1>
-						<Image
+						<img
 							src={"/images/PHONE.png"}
 							width={60}
 							height={60}
@@ -156,7 +156,7 @@ const ContactUs = () => {
 					</div>
 					<div className="flex flex-col justify-center items-center">
 						<h1 className="text-2xl font-bold text-center">Email</h1>
-						<Image
+						<img
 							src={"/images/EMAIL.png"}
 							width={60}
 							height={60}

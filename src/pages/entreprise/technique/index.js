@@ -25,13 +25,13 @@ function index() {
 			<div className="flex flex-row flex-wrap justify-center gap-20 items-center ">
 				<div className="mb-5  ">
 					<div className="flex flex-col h-max w-full md:w-96     ">
-						<Image
+						<img
 							className=" w-1/2 mx-auto"
 							alt="logo"
 							src={"/images/Icons/logo.png"}
 							height={80}
 							width={80}
-						></Image>
+						></img>
 						<div className=" text-center">
 							<h2 className=" font-bold">Nom de entrepirse </h2>
 							<p> Spécialiste des revêtements sans raccord</p>
@@ -72,7 +72,7 @@ function index() {
 					<div className="grid grid-cols-3 md:gap-5 gap-2 mx-1 my-2">
 						{images.map((image, index) => (
 							<div key={index} className="">
-								<Image
+								<img
 									src={image[0]}
 									width={160}
 									height={160}

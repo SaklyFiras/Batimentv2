@@ -67,7 +67,7 @@ const Index = () => {
 					<div className="grid grid-cols-3 md:gap-5 gap-2 mx-1">
 						{images.map((image, index) => (
 							<div key={index} className="">
-								<Image
+								<img
 									src={image[0]}
 									width={160}
 									height={160}

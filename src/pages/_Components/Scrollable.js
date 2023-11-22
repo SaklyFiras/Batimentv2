@@ -10,7 +10,7 @@ const Scrollable = () => {
 			</div>
 			<div className="flex flex-wrap  justify-around pb-5 gap-6  ">
 				<div className="relative">
-					<Image
+					<img
 						className="h-28 rounded-full "
 						width={125}
 						height={125}
@@ -23,7 +23,7 @@ const Scrollable = () => {
 				</div>
 
 				<div className="relative">
-					<Image
+					<img
 						className="h-28 rounded-full "
 						width={125}
 						height={125}
@@ -36,7 +36,7 @@ const Scrollable = () => {
 				</div>
 
 				<div className="relative">
-					<Image
+					<img
 						className="h-28 rounded-full "
 						width={125}
 						height={125}
@@ -49,7 +49,7 @@ const Scrollable = () => {
 				</div>
 
 				<div className="relative">
-					<Image
+					<img
 						className="h-28 rounded-full "
 						width={125}
 						height={125}
@@ -62,7 +62,7 @@ const Scrollable = () => {
 				</div>
 
 				<div className="relative">
-					<Image
+					<img
 						className="h-28 rounded-full "
 						width={125}
 						height={125}
@@ -75,7 +75,7 @@ const Scrollable = () => {
 				</div>
 
 				<div className="relative">
-					<Image
+					<img
 						className=" h-28 rounded-full "
 						width={125}
 						height={125}

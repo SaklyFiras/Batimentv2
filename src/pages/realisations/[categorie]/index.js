@@ -127,7 +127,7 @@ function Piscine() {
 					)}
 					{uploadedImages.map((image, index) => (
 						<div key={index} className="md:h-64 h-32 w-auto flex ">
-							<Image
+							<img
 								onClick={() => handleClickedImage(image)}
 								src={image.url}
 								alt={image.title}
@@ -145,7 +145,7 @@ function Piscine() {
 					href={left && left.url}
 				>
 					{left && left.name}
-					<Image
+					<img
 						src={"/images/Icons/arrow.png"}
 						width={30}
 						height={30}
@@ -157,20 +157,20 @@ function Piscine() {
 					className=" text-black w-8 md:w-20 text-break"
 					href="/realisations"
 				>
-					<Image
+					<img
 						src={"/images/Icons/menu.png"}
 						width={30}
 						height={30}
 						alt="menu"
 						className="shadow-xl hover:brightness-125 hover:-translate-y-1 hover:scale-105 transition-transform duration-300 ease-in-out"
-					></Image>
+					></img>
 				</Link>
 				<Link
 					className=" text-black w-24 md:w-20 text-break text-center"
 					href={right && right.url}
 				>
 					{right && right.name}
-					<Image
+					<img
 						src={"/images/Icons/arrow.png"}
 						width={30}
 						height={30}

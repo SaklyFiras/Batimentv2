@@ -6,7 +6,7 @@ const Slides = () => {
 	return (
 		<Carousel className=" h-fit w-screen border-1 border-black">
 			<Carousel.Item className="h-[30rem] w-full">
-				<Image
+				<img
 					className="d-block w-100 h-full"
 					src={"/images/Vitrine.jpg"}
 					width={300}
@@ -52,7 +52,7 @@ const Slides = () => {
 			</Carousel.Item>
 
 			<Carousel.Item className="h-[30rem] w-full">
-				<Image
+				<img
 					className="d-block w-100 h-full"
 					src={"/images/Vitrine.jpg"}
 					width={300}

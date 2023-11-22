@@ -53,7 +53,7 @@ const Realisations = () => {
 								className="   bg-white border border-gray-200 rounded-lg shadow md:w-fit w-full mx-2 "
 							>
 								<div className=" items-center d-flex place-content-center">
-									<Image
+									<img
 										className="rounded-t-lg h-32 object-cover  w-full"
 										src={post.image}
 										alt="post"

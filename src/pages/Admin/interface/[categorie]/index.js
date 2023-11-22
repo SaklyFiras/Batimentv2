@@ -168,7 +168,7 @@ const Interface = () => {
 					<div className="flex justify-center gap-2">
 						{imagesPreview.map((img, index) => (
 							<div key={img} className="">
-								<Image
+								<img
 									className="border-black border-2 "
 									src={img}
 									alt="Images Preview"
@@ -213,7 +213,7 @@ const Interface = () => {
 										type="checkbox"
 										className=" absolute "
 									/>
-									<Image
+									<img
 										className="border-black border-2"
 										src={image.url}
 										alt="Images Preview"

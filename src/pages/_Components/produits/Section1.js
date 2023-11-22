@@ -28,7 +28,7 @@ function Section1() {
 				<h2 className="text-3xl font-bold mb-4 text-center">
 					Moquette de marbre
 				</h2>
-				<Image
+				<img
 					height={400}
 					width={400}
 					src={MM1.src}
@@ -40,7 +40,7 @@ function Section1() {
 				<div className=" grid  grid-row-3 grid-cols-3 self-center gap-3 my-2      ">
 					{listIcons1.map((image, index) => (
 						<div key={index} className="relative">
-							<Image
+							<img
 								src={image[0]}
 								width={80}
 								height={90}
@@ -65,7 +65,7 @@ function Section1() {
 				<h2 className="text-3xl font-bold mb-4 text-center ">
 					Silice & marbre
 				</h2>
-				<Image
+				<img
 					height={400}
 					width={400}
 					src={MM2.src}
@@ -76,7 +76,7 @@ function Section1() {
 				<div className="grid  grid-row-3 grid-cols-3 self-center gap-3 my-2      ">
 				{listIcons1.map((image, index) => (
 						<div key={index} className="relative">
-							<Image
+							<img
 								src={image[0]}
 								width={80}
 								height={90}

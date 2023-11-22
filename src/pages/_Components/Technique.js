@@ -26,7 +26,7 @@ function Technique() {
 					</Link>
 				</div>
 				<div className="md:w-1/2  p-4">
-					<Image
+					<img
 						src={"/images/Technique.jpg"}
 						width={300}
 						height={500}

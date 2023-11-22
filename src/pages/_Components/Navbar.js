@@ -92,7 +92,7 @@ export default function Navbar() {
 					</Link>
 
 					<Link href="/">
-						<Image
+						<img
 							src={"/images/Icons/logo.png"}
 							width={20}
 							height={20}

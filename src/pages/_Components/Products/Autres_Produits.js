@@ -45,7 +45,7 @@ function Autres_Produits({ current }) {
 								key={index}
 								className="  group/edit h-auto w-auto flex flex-col p-8  no-underline"
 							>
-								<Image
+								<img
 									src={image.imageUrl}
 									alt={image.title}
 									width={150}

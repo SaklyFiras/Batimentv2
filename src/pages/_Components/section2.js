@@ -39,7 +39,7 @@ function Section2() {
 						key={index}
 						className="relative aspect-square h-40	 md:h-48 transform md:rotate-45  md:-skew-y-6  hover:brightness-125 hover:-translate-y-1 hover:scale-105 transition-transform duration-300 ease-in-out"
 					>
-						<Image
+						<img
 							src={image}
 							fill={true}
 							className="absolute w-full h-full object-cover border-1 border-black transform shadow-xl md:-rotate-45 md:skew-y-6 transition-transform duration-300 ease-in-out"
