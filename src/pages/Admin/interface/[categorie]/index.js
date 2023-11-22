@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import axios from "axios";
 import { url, config } from "../../index";
 import Routes from "@/pages/_Components/admin/Routes";
+import Head from "next/head";
 
 const Interface = () => {
 	const router = useRouter();
@@ -149,6 +150,10 @@ const Interface = () => {
 
 	return (
 		<div className="flex flex-row flex-wrap h-screen mt-5">
+			<Head>
+				<title>Admin | {categorie}</title>
+				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+			</Head>
 			<div className="flex justify-center mx-auto md:w-1/6 p-4 border-r">
 				<Routes />
 			</div>

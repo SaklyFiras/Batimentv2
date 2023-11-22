@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import Head from "next/head";
 
 const Realisations = () => {
 	const posts = [
@@ -36,6 +37,10 @@ const Realisations = () => {
 	];
 	return (
 		<div className="min-h-screen h-fit">
+			<Head>
+				<title>Nos Realisations</title>
+				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+			</Head>
 			<div className=" bg-slate-200 py-1">
 				<h2 className="mb-4 text-4xl tracking-wide font-extrabold text-center text-gray-900 mt-20 ">
 					Nos Realisations

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { url, config } from "../../index";
 import Routes from "@/pages/_Components/admin/Routes";
+import Head from "next/head";
 const Interface = () => {
 	const handleGetMessages = async () => {
 		try {
@@ -23,11 +24,12 @@ const Interface = () => {
 	const [Messages, setMessages] = useState([]);
 	return (
 		<div className="flex flex-row h-fit mt-5">
-			{/* Left column: Accordion */}
+			<Head>
+				<title>Admin | Messages</title>
+				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+			</Head>
 			<div className="flex justify-center md:w-1/6 p-4 border-r">
-				
-					<Routes />
-				
+				<Routes />
 			</div>
 
 			{/* Right column: Box with images and buttons */}
@@ -53,7 +55,9 @@ const Interface = () => {
 								{message.telephone}
 							</p>
 							<p className="overflow-auto break-words col-span-3">
-								<span className=" text-break break-words text-indigo-500 font-bold">Message : </span>
+								<span className=" text-break break-words text-indigo-500 font-bold">
+									Message :{" "}
+								</span>
 								{message.message}
 							</p>
 						</div>

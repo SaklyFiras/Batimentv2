@@ -4,6 +4,7 @@ import { url, config } from "../Admin/index";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Head from "next/head";
 
 const ContactUs = () => {
 	const [message, setMessage] = useState({
@@ -34,6 +35,10 @@ const ContactUs = () => {
 	};
 	return (
 		<>
+			<Head>
+				<title>Contactz-nous</title>
+				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+			</Head>
 			<div className="bg-slate-200 py-1">
 				<h2 className="mb-4 text-4xl tracking-wide font-extrabold text-center mt-20 text-gray-900 ">
 					Contactez nous

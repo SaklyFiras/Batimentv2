@@ -2,6 +2,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Routes from "@/pages/_Components/admin/Routes";
+import Head from "next/head";
 
 const Interface = () => {
 	const [addImageClicked, setAddImageClicked] = useState(false);
@@ -60,7 +61,10 @@ const Interface = () => {
 
 	return (
 		<div className="flex flex-row flex-wrap h-screen mt-5 justify-center md:justify-start">
-			{/* Left column: Accordion */}
+			<Head>
+				<title>Admin | Interface</title>
+				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+			</Head>
 			<div className="md:w-1/6 p-4 border-r">
 				<Routes />
 			</div>

@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
+import Head from "next/head";
 
 export const url = "https://batimentv2.onrender.com/api/v2";
 // export const url = "http://localhost:3000/api/v2";
@@ -35,6 +36,10 @@ function Admin() {
 
 	return (
 		<div className="h-screen d-flex justify-center items-center flex-col container  ">
+			<Head>
+				<title>Admin</title>
+				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+			</Head>
 			<div className="border-1 py-5 px-28">
 				<h1 className="text-3xl font-bold text-center">Admin Login</h1>
 
