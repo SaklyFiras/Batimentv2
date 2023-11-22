@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import axios from "axios";
-
+import MyGallery from "@/pages/_Components/utils/Gallery";
 import { url, config } from "../../Admin/index";
 import Head from "next/head";
 
@@ -37,6 +37,8 @@ const Links = [
 
 function Piscine() {
 	const [uploadedImages, setUploadedImages] = useState([]);
+	const [showGallery, setShowGallery] = useState(false);
+	const [clickedImage, setClickedImage] = useState(null);
 	const router = useRouter();
 	const { categorie } = router.query;
 
@@ -86,16 +88,47 @@ function Piscine() {
 		handleGetImages();
 	}, [categorie]);
 
+	const handleClickedImage = (image) => {
+		setShowGallery(true);
+		setClickedImage(image);
+	};
+
 	return (
 		<div className="mt-20 h-fit min-h-screen">
 			<Head>
 				<title>Realisations | {categorie}</title>
 			</Head>
-			<div className="flex justify-center items-center  gap-6 mb-64 ">
+			<div className="flex justify-center items-center  gap-6  min-h-[30rem] ">
 				<div className="grid grid-cols-3  md:gap-4 gap-2 mx-2   mb-5 ">
+					{showGallery && (
+						<div className=" fixed inset-1/2 transform -translate-x-1/2 -translate-y-1/2 h-screen w-screen z-50 bg-opacity-75 bg-black  ">
+							<MyGallery clickedImage={clickedImage} categorie={categorie} />
+
+							<button
+								onClick={() => setShowGallery(false)}
+								className="absolute top-5 right-5 text-white  p-2 rounded-full"
+							>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									className="h-6 w-6 "
+									fill="none"
+									viewBox="0 0 24 24"
+									stroke="currentColor"
+								>
+									<path
+										strokeLinecap="round"
+										strokeLinejoin="round"
+										strokeWidth={2}
+										d="M6 18L18 6M6 6l12 12"
+									/>
+								</svg>
+							</button>
+						</div>
+					)}
 					{uploadedImages.map((image, index) => (
 						<div key={index} className="md:h-64 h-32 w-auto flex ">
 							<Image
+								onClick={() => handleClickedImage(image)}
 								src={image.url}
 								alt={image.title}
 								width={400}
@@ -106,9 +139,9 @@ function Piscine() {
 					))}
 				</div>
 			</div>
-			<div className="flex justify-between md:m-5 m-2 border-2  p-4 mx-5 mb-5 items-center shadow-md">
+			<div className="flex justify-between md:m-5 m-2 border-2  p-4 md:mx-5 mb-5 items-center shadow-md">
 				<Link
-					className=" text-black w-12 md:w-20 text-break text-center "
+					className=" text-black w-24 md:w-20 text-break text-center "
 					href={left && left.url}
 				>
 					{left && left.name}
@@ -121,7 +154,7 @@ function Piscine() {
 					/>
 				</Link>
 				<Link
-					className=" text-black w-12 md:w-20 text-break"
+					className=" text-black w-8 md:w-20 text-break"
 					href="/realisations"
 				>
 					<Image
@@ -132,7 +165,10 @@ function Piscine() {
 						className="shadow-xl hover:brightness-125 hover:-translate-y-1 hover:scale-105 transition-transform duration-300 ease-in-out"
 					></Image>
 				</Link>
-				<Link className=" text-black w-12 md:w-20 text-break text-center" href={right && right.url}>
+				<Link
+					className=" text-black w-24 md:w-20 text-break text-center"
+					href={right && right.url}
+				>
 					{right && right.name}
 					<Image
 						src={"/images/Icons/arrow.png"}

@@ -32,12 +32,14 @@ const ImageSlider = ({}) => {
 				<title>Produits</title>
 				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 			</Head>
-			<h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 mt-20 ">
-				Nos Produits
-			</h2>
-			<p className="mb-8 lg:mb-16 font-light text-center text-gray-500  sm:text-xl">
-				Produits de qualité
-			</p>
+			<div className="bg-slate-200 py-1">
+				<h2 className="mb-4 text-4xl  font-extrabold text-center text-gray-900 mt-20 tracking-wide  ">
+					Nos Produits
+				</h2>
+				<p className="mb-8  tracking-wide font-light text-center text-gray-500  sm:text-xl">
+					Produits de qualité
+				</p>
+			</div>
 			<Section1 />
 			<Section2 />
 		</>

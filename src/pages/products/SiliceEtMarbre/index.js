@@ -86,12 +86,12 @@ const Index = () => {
 						<p className=" font-bold">Nos produits</p>
 						<ul className="list-disc">
 							<li>
-								<Link href={"/products/Moquettedemarbre"}>
+								<Link className=" no-underline  text-slate-500 hover:text-slate-700" href={"/products/Moquettedemarbre"}>
 									Moquette de marbre
 								</Link>
 							</li>
 							<li>
-								<Link href={"/products/SiliceEtMarbre"}>Slice & marbre</Link>
+								<Link className=" no-underline  text-slate-500 hover:text-slate-700" href={"/products/SiliceEtMarbre"}>Slice & marbre</Link>
 							</li>
 						</ul>
 					</div>

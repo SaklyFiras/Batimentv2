@@ -36,13 +36,15 @@ const Realisations = () => {
 	];
 	return (
 		<div className="min-h-screen h-fit">
-			<h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 mt-20 ">
-				Nos Realisations
-			</h2>
-			<p className="mb-8 lg:mb-16 font-light text-center text-gray-500  sm:text-xl">
-				Decouvrir nos realisations au cours des années
-			</p>
-			<div className="flex flex-col flex-wrap    mb-5  gap-6 ">
+			<div className=" bg-slate-200 py-1">
+				<h2 className="mb-4 text-4xl tracking-wide font-extrabold text-center text-gray-900 mt-20 ">
+					Nos Realisations
+				</h2>
+				<p className="mb-8 lg:mb-16 font-light text-center text-gray-500  sm:text-xl">
+					Decouvrir nos realisations au cours des années
+				</p>
+			</div>
+			<div className="flex flex-col flex-wrap mt-16    mb-5  gap-6 ">
 				<div className="flex justify-around flex-wrap gap-2">
 					{posts.map((post, index) => {
 						return (

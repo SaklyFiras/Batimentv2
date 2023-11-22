@@ -2,8 +2,8 @@ import Image from "next/image";
 import { useState } from "react";
 import { url, config } from "../Admin/index";
 import axios from "axios";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const ContactUs = () => {
 	const [message, setMessage] = useState({
@@ -17,7 +17,7 @@ const ContactUs = () => {
 		try {
 			const response = await axios.post(`${url}/message`, message, config);
 			if (response.status === 200) {
-				toast.success('Message sent successfully');
+				toast.success("Message sent successfully");
 				setMessage({
 					email: "",
 					name: "",
@@ -25,7 +25,7 @@ const ContactUs = () => {
 					message: "",
 				});
 			} else {
-				toast.error('Message not sent');
+				toast.error("Message not sent");
 			}
 		} catch (error) {
 			console.error("An error occurred during login:", error); // Log the error
@@ -34,15 +34,17 @@ const ContactUs = () => {
 	};
 	return (
 		<>
-		<ToastContainer />
+			<div className="bg-slate-200 py-1">
+				<h2 className="mb-4 text-4xl tracking-wide font-extrabold text-center mt-20 text-gray-900 ">
+					Contactez nous
+				</h2>
+				<p className="mb-8  font-light text-center text-gray-500  sm:text-xl">
+					Nous sommes à votre disposition
+				</p>
+			</div>
+			<ToastContainer />
 			<section className="bg-white mt-5 ">
 				<div className="py-8  px-4 mx-auto max-w-screen-md">
-					<h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 ">
-						Contactez nous
-					</h2>
-					<p className="mb-8 lg:mb-16 font-light text-center text-gray-500  sm:text-xl">
-						Nous sommes à votre disposition
-					</p>
 					<div action="#" className="space-y-8  ">
 						<div>
 							<label
@@ -162,7 +164,8 @@ const ContactUs = () => {
 							className="my-1"
 						/>
 						<p className="text-center  mt-4">
-							<a className="text-black text-decoration-none"
+							<a
+								className="text-black text-decoration-none"
 								href="mailto:
                             XX@gmail.com"
 							>
@@ -171,7 +174,6 @@ const ContactUs = () => {
 						</p>
 					</div>
 				</div>
-				
 			</div>
 		</>
 	);

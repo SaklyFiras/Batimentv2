@@ -70,6 +70,15 @@ function Drawer() {
 					<span className="sr-only">Close menu</span>
 				</button>
 				<div className="flex flex-col gap-3">
+				<div>
+						<Link
+							className=" text-gray-800  no-underline	"
+							onClick={hideDrawer}
+							href="/"
+						>
+							Home
+						</Link>
+					</div>
 					<div>
 						Entreprise
 						<div>
