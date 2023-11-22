@@ -3,13 +3,12 @@ import "react-image-gallery/styles/css/image-gallery.css";
 import { useEffect, useState } from "react";
 import { url, config } from "@/pages/Admin/index";
 import axios from "axios";
-import images from "../../../../Server/models/images";
 
 const MyGallery = ({ clickedImage, categorie }) => {
 	const [images, setImages] = useState([]);
+	
 
-	const width = window.innerWidth;
-	const position = width > 768 ? "left" : "bottom";
+	
 
 	useEffect(() => {
 		const fetchImages = async () => {
@@ -19,6 +18,7 @@ const MyGallery = ({ clickedImage, categorie }) => {
 				const images = res.data.images[0].images.map((image) => ({
 					original: image.url,
 					thumbnail: image.url,
+					
 				}));
 				//set ClickedImage as first image
 				const index = images.findIndex(
@@ -36,27 +36,18 @@ const MyGallery = ({ clickedImage, categorie }) => {
 		fetchImages();
 	}, [categorie]);
 
-	const organiseImages = () => {
-		const images = images.map((image) => ({
-			original: image.url,
-			thumbnail: image.url,
-		}));
-		//find index of clicked image and reorganise the array
-		const index = images.findIndex(
-			(image) => image.original === clickedImage.url
-		);
-		const temp = images[0];
-		images[0] = images[index];
-		images[index] = temp;
-
-		return images;
-	};
-
 	return (
 		<>
-			<ImageGallery additionalClass="mt-[50%] md:mt-0" thumbnailPosition={position} items={images} />;
+			<ImageGallery
+				additionalClass="mt-[50%] md:mt-0 "
+				
+				items={images}
+			/>
+			;
 		</>
 	);
 };
+
+
 
 export default MyGallery;

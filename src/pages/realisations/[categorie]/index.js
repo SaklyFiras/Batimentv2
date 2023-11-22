@@ -101,12 +101,12 @@ function Piscine() {
 			<div className="flex justify-center items-center  gap-6  min-h-[30rem] ">
 				<div className="grid grid-cols-3  md:gap-4 gap-2 mx-2   mb-5 ">
 					{showGallery && (
-						<div className=" fixed inset-1/2 transform -translate-x-1/2 -translate-y-1/2 h-screen w-screen z-50 bg-opacity-75 bg-black  ">
+						<div className=" fixed inset-1/2 transform -translate-x-1/2 -translate-y-1/2 md:h-max h-full w-screen z-50 bg-opacity-75 bg-black  ">
 							<MyGallery clickedImage={clickedImage} categorie={categorie} />
 
 							<button
 								onClick={() => setShowGallery(false)}
-								className="absolute top-5 right-5 text-white  p-2 rounded-full"
+								className="absolute top-10 right-5 text-white  p-2 rounded-full"
 							>
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
