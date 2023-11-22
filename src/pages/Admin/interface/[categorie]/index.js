@@ -18,6 +18,7 @@ const Interface = () => {
 	const [uploadedImages, setUploadedImages] = useState([]);
 
 	useEffect(() => {
+		setUploadedImages([]);
 		handleGetImages();
 		setSelectedImages([]);
 	}, [categorie]);
