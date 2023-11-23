@@ -149,6 +149,23 @@ const Interface = () => {
 
 		setSelectedImages(newSelectedImages);
 	};
+	const isAuth = async () => {
+		try {
+			const res = await axios.get(`${url}/checkAuth`);
+			if (res.data.success) {
+				
+			} else {
+				router.push("/Admin");
+			}
+		} catch (error) {
+			router.push("/Admin");
+			console.log(error);
+		}
+	};
+
+	useEffect(() => {
+		 isAuth();
+	}, []);
 
 	return (
 		<div className="flex flex-row md:flex-col flex-wrap h-fit min-h-screen mt-5">

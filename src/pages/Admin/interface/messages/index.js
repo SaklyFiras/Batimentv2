@@ -22,8 +22,7 @@ const Interface = () => {
 		try {
 			const res = await axios.get(`${url}/checkAuth`);
 			if (res.data.success) {
-				console.log(res.data.success);
-				setLoggedIn(true);
+				
 			} else {
 				router.push("/Admin");
 			}
@@ -32,6 +31,10 @@ const Interface = () => {
 			console.log(error);
 		}
 	};
+
+	useEffect(() => {
+		 isAuth();
+	}, []);
 	useEffect(() => {
 		handleGetMessages();
 	}, []);
