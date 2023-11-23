@@ -30,25 +30,25 @@ function Routes() {
 						{item.title}
 					</Link>
 					<div className="flex flex-col indent-2">
-						<Link className="text-black" href={"/Admin/interface/allees"}>
+						<Link className="text-slate-600 focus:text-gray-900 no-underline focus:underline" href={"/Admin/interface/allees"}>
 							{item.content[0]}
 						</Link>
 						<Link
-							className="text-black"
+							className="text-slate-600 focus:text-gray-900 no-underline focus:underline"
 							href={"/Admin/interface/collectivites"}
 						>
 							{item.content[1]}
 						</Link>
-						<Link className="text-black" href={"/Admin/interface/escaliers"}>
+						<Link className="text-slate-600 focus:text-gray-900 no-underline focus:underline" href={"/Admin/interface/escaliers"}>
 							{item.content[2]}
 						</Link>
-						<Link className="text-black" href={"/Admin/interface/interieurs"}>
+						<Link className="text-slate-600 focus:text-gray-900 no-underline focus:underline" href={"/Admin/interface/interieurs"}>
 							{item.content[3]}
 						</Link>
-						<Link className="text-black" href={"/Admin/interface/motifs"}>
+						<Link className="text-slate-600 focus:text-gray-900 no-underline focus:underline" href={"/Admin/interface/motifs"}>
 							{item.content[4]}
 						</Link>
-						<Link className="text-black" href={"/Admin/interface/piscines"}>
+						<Link className="text-slate-600 focus:text-gray-900 no-underline focus:underline" href={"/Admin/interface/piscines"}>
 							{item.content[5]}
 						</Link>
 					</div>
