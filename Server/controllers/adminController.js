@@ -4,6 +4,8 @@ const ErrorHandler = require("../utils/ErrorHandler");
 const catchAsyncErrors = require("../middlewares/catchAsyncErrors");
 const sendToken = require("../utils/jwtToken");
 const cloudinary = require("cloudinary").v2;
+const jwt = require("jsonwebtoken");
+
 exports.registerUser = catchAsyncErrors(async (req, res, next) => {
 	const { name, password } = req.body;
 
@@ -113,10 +115,15 @@ exports.adminDeleteImages = catchAsyncErrors(async (req, res, next) => {
 	// remove images that Images.images = imagesArray using mongoose pull
 	images = await Images.findOneAndUpdate(
 		{ categorie: req.params.categorie },
-		{ $pull: { images: { public_id: { $in: imagesArray.map((image) => image.public_id) } } } },
+		{
+			$pull: {
+				images: {
+					public_id: { $in: imagesArray.map((image) => image.public_id) },
+				},
+			},
+		},
 		{ new: true }
 	);
-
 
 	res.status(200).json({
 		success: true,
@@ -130,5 +137,18 @@ exports.logout = catchAsyncErrors(async (req, res, next) => {
 	res.status(200).json({
 		success: true,
 		message: "Logged out",
+	});
+});
+
+exports.checkAuth = catchAsyncErrors(async (req, res, next) => {
+	const { token } = req.cookies;
+
+	if (!token) {
+		return next(new ErrorHandler("Login first to access this resource.", 401));
+	}
+	const decoded = jwt.verify(token, process.env.JWT_SECRET);
+	req.user = await User.findById(decoded.id);
+	res.status(200).json({
+		success: true,
 	});
 });

@@ -7,6 +7,8 @@ import { url, config } from "../../index";
 import Routes from "@/pages/_Components/admin/Routes";
 import Head from "next/head";
 
+
+
 const Interface = () => {
 	const router = useRouter();
 	const { categorie } = router.query;
@@ -78,7 +80,7 @@ const Interface = () => {
 		}
 		setLoading(false);
 	};
-	console.log(selectedImages);
+	
 
 	const handleGetImages = async () => {
 		setLoading(true);
@@ -149,12 +151,12 @@ const Interface = () => {
 	};
 
 	return (
-		<div className="flex flex-row flex-wrap h-screen mt-5">
+		<div className="flex flex-row md:flex-col flex-wrap h-fit min-h-screen mt-5">
 			<Head>
 				<title>Admin | {categorie}</title>
 				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 			</Head>
-			<div className="flex justify-center mx-auto md:w-1/6 p-4 border-r">
+			<div className="flex justify-center mx-auto md:w-1/6 p-4 md:border-r">
 				<Routes />
 			</div>
 
@@ -183,7 +185,7 @@ const Interface = () => {
 							</div>
 						))}
 					</div>
-					<div className="flex flex-wrap  justify-end gap-2">
+					<div className="flex flex-wrap  md:justify-end justify-center gap-2">
 						<button
 							disabled={loading}
 							onClick={handleUpload}
@@ -208,20 +210,20 @@ const Interface = () => {
 						)}
 					</div>
 				</div>
-				<div className="flex flex-wrap border-2 mt-1">
+				<div className="flex flex-col md:flex-row h-max py-3 flex-wrap border-2 mt-1">
 					{uploadedImages.length > 0 &&
 						uploadedImages.map((image, index) => {
 							return (
-								<div key={image.url} className="w-1/4 p-4 relative">
+								<div key={image.url} className=" md:h-36 md:w-36 p-4 relative">
 									<input
 										onClick={handleSelectImage(index)}
 										type="checkbox"
 										className=" absolute "
 									/>
 									<img
-										className="border-black border-2"
+										className="flex border-black border-2 h-full w-full max-h-40 	"
 										src={image.url}
-										alt="Images Preview"
+										alt={`image preview ${index}`}
 										width={150}
 										height={150}
 									/>

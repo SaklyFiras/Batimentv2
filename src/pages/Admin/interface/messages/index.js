@@ -18,12 +18,26 @@ const Interface = () => {
 			// Handle login error - Show message to the user, redirect, etc.
 		}
 	};
+	const isAuth = async () => {
+		try {
+			const res = await axios.get(`${url}/checkAuth`);
+			if (res.data.success) {
+				console.log(res.data.success);
+				setLoggedIn(true);
+			} else {
+				router.push("/Admin");
+			}
+		} catch (error) {
+			router.push("/Admin");
+			console.log(error);
+		}
+	};
 	useEffect(() => {
 		handleGetMessages();
 	}, []);
 	const [Messages, setMessages] = useState([]);
 	return (
-		<div className="flex flex-row h-fit mt-5">
+		<div className="flex flex-row h-fit mt-5 min-h-screen">
 			<Head>
 				<title>Admin | Messages</title>
 				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -34,7 +48,7 @@ const Interface = () => {
 
 			{/* Right column: Box with images and buttons */}
 			<div className="md:w-5/6 p-4 overflow-auto">
-				<div className="flex flex-col max-w-sm flex-wrap">
+				<div className="flex flex-col  flex-wrap">
 					<h1 className="mx-auto">MESSAGES</h1>
 					{/*Messages wih email name telephone and message */}
 					{Messages.map((message, index) => (
