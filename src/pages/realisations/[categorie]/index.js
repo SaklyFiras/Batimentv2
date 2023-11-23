@@ -98,7 +98,7 @@ function Piscine() {
 			<Head>
 				<title>Realisations | {categorie}</title>
 			</Head>
-			<div className="flex justify-center items-center  gap-6  min-h-[30rem] ">
+			<div className="flex justify-center md:items-center  gap-6  md:min-h-[30rem] ">
 				<div className="grid grid-cols-3  md:gap-4 gap-2 mx-2   mb-5 ">
 					{showGallery && (
 						<div className=" fixed inset-1/2 transform -translate-x-1/2 -translate-y-1/2 md:h-max h-full w-screen z-50 bg-opacity-75 bg-black  ">
@@ -126,7 +126,7 @@ function Piscine() {
 						</div>
 					)}
 					{uploadedImages.map((image, index) => (
-						<div key={index} className="md:h-64 h-32 w-auto flex ">
+						<div key={index} className="flex flex-shrink-1 md:max-h-64 max-h-32  ">
 							<img
 								onClick={() => handleClickedImage(image)}
 								src={image.url}
