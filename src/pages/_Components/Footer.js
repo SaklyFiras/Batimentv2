@@ -13,7 +13,7 @@ const Footer = () => {
                         <Link href={"/TermsofService"} className="text-gray-400 hover:text-white mx-2">Terms of Service</Link>
                     </div>
                     <div className="w-full md:w-1/3 text-center md:text-right">
-                        <p className="text-gray-400">Made by Hazem</p>
+                        <p className="text-gray-400">Made by Firas</p>
                     </div>
                 </div>
             </div>
